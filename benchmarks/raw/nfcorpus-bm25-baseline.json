@@ -1,0 +1,17 @@
+{
+  "run_id": "nfcorpus-local-bm25",
+  "as_of_utc": "2026-06-14T12:25:38+00:00",
+  "dataset": "BEIR NFCorpus",
+  "split": "test",
+  "index": "local dependency-free BM25",
+  "analyzer_note": "Regex tokenization; not guaranteed to match BEIR official Anserini/Pyserini analyzer exactly.",
+  "documents": 3633,
+  "queries_with_qrels": 323,
+  "queries_evaluated": 323,
+  "metrics": {
+    "ndcg@10": 0.310981,
+    "recall@10": 0.152029,
+    "mrr@10": 0.519211
+  },
+  "official_baseline_note": "Compare against BEIR official BM25/NFCorpus baseline in the final evidence report; exact parity may require official analyzer stack."
+}

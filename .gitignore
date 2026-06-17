@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/raw/
+indexes/
+*.log
+tests/golden/smoke_index.json
+benchmarks/raw/*.bin
+# Large generated indexes and raw data stay out unless explicitly curated.
+
+# Internal privacy-gate tooling stays out of the public tree.
+PRE_PUBLISH_PRIVACY_CHECKLIST.md
+scripts/privacy_scan.py

@@ -1,0 +1,268 @@
+{
+  "run_id": "nfcorpus-lsa-hybrid-sweep",
+  "as_of_utc": "2026-06-14T22:46:26+00:00",
+  "dataset": "BEIR NFCorpus",
+  "split": "test",
+  "documents": 3633,
+  "queries_evaluated": 323,
+  "metric_k": 10,
+  "candidate_k": 100,
+  "max_features": 20000,
+  "baseline": {
+    "ndcg@10": 0.310981,
+    "recall@10": 0.152029,
+    "mrr@10": 0.519211
+  },
+  "best": {
+    "run_id": "weighted-bm25-lsa-d256-w0.3",
+    "kind": "hybrid_weighted",
+    "dims": 256,
+    "dense_weight": 0.3,
+    "metrics": {
+      "ndcg@10": 0.328918,
+      "recall@10": 0.164344,
+      "mrr@10": 0.529089
+    }
+  },
+  "beat_bm25_by_ndcg": 0.017937,
+  "notes": [
+    "LSA dense backend is local TF-IDF + truncated SVD via SciPy; no model download and no server.",
+    "Use this as a lightweight dense/hybrid hardening layer, not as a sentence-transformers result."
+  ],
+  "runs": [
+    {
+      "run_id": "bm25",
+      "kind": "lexical",
+      "metrics": {
+        "ndcg@10": 0.310981,
+        "recall@10": 0.152029,
+        "mrr@10": 0.519211
+      }
+    },
+    {
+      "run_id": "lsa-dense-d64",
+      "kind": "dense_lsa",
+      "dims": 64,
+      "metrics": {
+        "ndcg@10": 0.185679,
+        "recall@10": 0.080686,
+        "mrr@10": 0.317753
+      }
+    },
+    {
+      "run_id": "rrf-bm25-lsa-d64",
+      "kind": "hybrid_rrf",
+      "dims": 64,
+      "metrics": {
+        "ndcg@10": 0.264709,
+        "recall@10": 0.126756,
+        "mrr@10": 0.429616
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d64-w0.05",
+      "kind": "hybrid_weighted",
+      "dims": 64,
+      "dense_weight": 0.05,
+      "metrics": {
+        "ndcg@10": 0.313138,
+        "recall@10": 0.155549,
+        "mrr@10": 0.515525
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d64-w0.1",
+      "kind": "hybrid_weighted",
+      "dims": 64,
+      "dense_weight": 0.1,
+      "metrics": {
+        "ndcg@10": 0.313513,
+        "recall@10": 0.154085,
+        "mrr@10": 0.517829
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d64-w0.2",
+      "kind": "hybrid_weighted",
+      "dims": 64,
+      "dense_weight": 0.2,
+      "metrics": {
+        "ndcg@10": 0.314456,
+        "recall@10": 0.153299,
+        "mrr@10": 0.517943
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d64-w0.3",
+      "kind": "hybrid_weighted",
+      "dims": 64,
+      "dense_weight": 0.3,
+      "metrics": {
+        "ndcg@10": 0.313631,
+        "recall@10": 0.152606,
+        "mrr@10": 0.521925
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d64-w0.5",
+      "kind": "hybrid_weighted",
+      "dims": 64,
+      "dense_weight": 0.5,
+      "metrics": {
+        "ndcg@10": 0.2914,
+        "recall@10": 0.14345,
+        "mrr@10": 0.480635
+      }
+    },
+    {
+      "run_id": "lsa-dense-d128",
+      "kind": "dense_lsa",
+      "dims": 128,
+      "metrics": {
+        "ndcg@10": 0.235133,
+        "recall@10": 0.114081,
+        "mrr@10": 0.369098
+      }
+    },
+    {
+      "run_id": "rrf-bm25-lsa-d128",
+      "kind": "hybrid_rrf",
+      "dims": 128,
+      "metrics": {
+        "ndcg@10": 0.290281,
+        "recall@10": 0.150814,
+        "mrr@10": 0.462983
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d128-w0.05",
+      "kind": "hybrid_weighted",
+      "dims": 128,
+      "dense_weight": 0.05,
+      "metrics": {
+        "ndcg@10": 0.319621,
+        "recall@10": 0.161927,
+        "mrr@10": 0.520151
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d128-w0.1",
+      "kind": "hybrid_weighted",
+      "dims": 128,
+      "dense_weight": 0.1,
+      "metrics": {
+        "ndcg@10": 0.319906,
+        "recall@10": 0.160867,
+        "mrr@10": 0.520631
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d128-w0.2",
+      "kind": "hybrid_weighted",
+      "dims": 128,
+      "dense_weight": 0.2,
+      "metrics": {
+        "ndcg@10": 0.323825,
+        "recall@10": 0.16226,
+        "mrr@10": 0.524692
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d128-w0.3",
+      "kind": "hybrid_weighted",
+      "dims": 128,
+      "dense_weight": 0.3,
+      "metrics": {
+        "ndcg@10": 0.321679,
+        "recall@10": 0.161323,
+        "mrr@10": 0.52034
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d128-w0.5",
+      "kind": "hybrid_weighted",
+      "dims": 128,
+      "dense_weight": 0.5,
+      "metrics": {
+        "ndcg@10": 0.309769,
+        "recall@10": 0.155316,
+        "mrr@10": 0.498935
+      }
+    },
+    {
+      "run_id": "lsa-dense-d256",
+      "kind": "dense_lsa",
+      "dims": 256,
+      "metrics": {
+        "ndcg@10": 0.272273,
+        "recall@10": 0.134961,
+        "mrr@10": 0.432932
+      }
+    },
+    {
+      "run_id": "rrf-bm25-lsa-d256",
+      "kind": "hybrid_rrf",
+      "dims": 256,
+      "metrics": {
+        "ndcg@10": 0.313314,
+        "recall@10": 0.159387,
+        "mrr@10": 0.491614
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d256-w0.05",
+      "kind": "hybrid_weighted",
+      "dims": 256,
+      "dense_weight": 0.05,
+      "metrics": {
+        "ndcg@10": 0.321644,
+        "recall@10": 0.163969,
+        "mrr@10": 0.520393
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d256-w0.1",
+      "kind": "hybrid_weighted",
+      "dims": 256,
+      "dense_weight": 0.1,
+      "metrics": {
+        "ndcg@10": 0.324181,
+        "recall@10": 0.164019,
+        "mrr@10": 0.525294
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d256-w0.2",
+      "kind": "hybrid_weighted",
+      "dims": 256,
+      "dense_weight": 0.2,
+      "metrics": {
+        "ndcg@10": 0.327136,
+        "recall@10": 0.164973,
+        "mrr@10": 0.525135
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d256-w0.3",
+      "kind": "hybrid_weighted",
+      "dims": 256,
+      "dense_weight": 0.3,
+      "metrics": {
+        "ndcg@10": 0.328918,
+        "recall@10": 0.164344,
+        "mrr@10": 0.529089
+      }
+    },
+    {
+      "run_id": "weighted-bm25-lsa-d256-w0.5",
+      "kind": "hybrid_weighted",
+      "dims": 256,
+      "dense_weight": 0.5,
+      "metrics": {
+        "ndcg@10": 0.325532,
+        "recall@10": 0.165887,
+        "mrr@10": 0.518399
+      }
+    }
+  ]
+}

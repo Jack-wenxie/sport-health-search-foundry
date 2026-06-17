@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-06-17T08:27:06+00:00",
+  "python": "python",
+  "smoke": "scripts/smoke.py",
+  "golden_fixture": "tests\\golden\\golden_docs.jsonl",
+  "index_path": "tests\\golden\\smoke_index.json",
+  "query": "knee osteoarthritis gait biomechanics",
+  "expected_top1": "G001",
+  "actual_top1": "G001",
+  "mini_metrics": {
+    "ndcg@10": 1.0,
+    "recall@10": 1.0,
+    "mrr@10": 1.0
+  },
+  "top_k": [
+    {
+      "doc_id": "G001",
+      "score": 6.76177369,
+      "rank": 1
+    },
+    {
+      "doc_id": "G003",
+      "score": 1.23414095,
+      "rank": 2
+    }
+  ],
+  "hybrid_smoke_top1": "G003"
+}
